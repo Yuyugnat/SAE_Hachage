@@ -10,13 +10,13 @@ public class Test {
         // Dictionnaire d = new Dictionnaire("randomWordsPetit.txt", 50);
  
         // pour un dico créé à partir du fichier radnomWords.txt avec f appartenant à {0.01,0.1,0.5,1}
-        Dictionnaire d = new Dictionnaire("LeRougeEtLeNoir.txt", 0.7);
+        Dictionnaire d = new Dictionnaire("randomWords.txt", 0.1);
 
         System.out.println("maxSize : " + d.getMaxSize());
         System.out.println("cardinal : " + d.getCardinal());
         System.out.println("nbListes : " + d.getNbListes());
-        System.out.println("totalTimeh : " + d.getTotalTimeh() + "ms");
-        System.out.println("totalTimeContient : " + d.getTotalTimeContient() + "ms");
+        System.out.println("totalTimeh : " + d.getTotalTimeh() + " ms");
+        System.out.println("totalTimeContient : " + d.getTotalTimeContient() + " ms");
 
         int nbRecherches = 100000;
 

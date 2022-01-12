@@ -68,12 +68,8 @@ public class HTNaive {
     public void ajoutListe(ListeBigI L) {
 
         ListeBigI listeCourante = new ListeBigI(L);
-        BigInteger a;
-        while (!listeCourante.estVide()) {
-
-            a = listeCourante.supprTete();
-            this.ajout(a);
-        }
+        while (!listeCourante.estVide())
+            this.ajout(listeCourante.supprTete());
 
     }
 
@@ -89,7 +85,7 @@ public class HTNaive {
 
     public String toString() {
 
-        String res = "";
+        String res = "";    
 
         for (int i = 0; i < this.table.length; i++)
             res += "Table[" + i + "] : "
