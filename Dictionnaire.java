@@ -58,6 +58,13 @@ public class Dictionnaire {
     public int getNbListes() {
         return this.tableHachage.getNbListes();
     }
+    public long getTotalTimeh() {
+        return this.tableHachage.getTotalTimeh();
+    }
+
+    public long getTotalTimeContient() {
+        return this.tableHachage.getTotalTimeContient();
+    }
 
     public String toString() {
         return "Dictionnaire\n" + this.tableHachage.toString();

@@ -2,10 +2,14 @@ import java.math.BigInteger;
 
 public class HTNaive {
 
-    ListeBigI[] table;
+    private ListeBigI[] table;
+    private long totalTimeh;
+    private long totalTimeContient;
 
     public HTNaive(int m) {
         this.table = new ListeBigI[m];
+        this.totalTimeh = 0;
+        this.totalTimeContient = 0;
         for (int i = 0; i < m; i++)
             this.table[i] = new ListeBigI();
     }
@@ -16,8 +20,7 @@ public class HTNaive {
     }
 
     public HTNaive(ListeBigI l, double f) {
-
-        this(l,(int) (f * HTNaive.cardListe(l)));
+        this(l, (int) (f * HTNaive.cardListe(l)));
     }
 
     private static int cardListe(ListeBigI l) {
@@ -29,12 +32,28 @@ public class HTNaive {
         return this.table[i];
     }
 
+    public long getTotalTimeh() {
+        return this.totalTimeh;
+    }
+
+    public long getTotalTimeContient() {
+        return this.totalTimeContient;
+    }
+
     private int h(BigInteger u) {
-        return u.intValue() % this.table.length;
+        long deb = System.currentTimeMillis();
+        int res = u.mod(BigInteger.valueOf(this.table.length)).intValue();
+        long fin = System.currentTimeMillis();
+        this.totalTimeh += (fin - deb);
+        return res;
     }
 
     public boolean contient(BigInteger u) {
-        return this.table[this.h(u)].contient(u);
+        long deb = System.currentTimeMillis();
+        boolean res = this.table[this.h(u)].contient(u);
+        long fin = System.currentTimeMillis();
+        this.totalTimeContient += (fin - deb);
+        return res;
     }
 
     public boolean ajout(BigInteger u) {
@@ -47,7 +66,7 @@ public class HTNaive {
     }
 
     public void ajoutListe(ListeBigI L) {
-        
+
         ListeBigI listeCourante = new ListeBigI(L);
         BigInteger a;
         while (!listeCourante.estVide()) {
@@ -55,7 +74,7 @@ public class HTNaive {
             a = listeCourante.supprTete();
             this.ajout(a);
         }
-            
+
     }
 
     public ListeBigI getElements() {

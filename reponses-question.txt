@@ -23,4 +23,7 @@ et où leur longueur  vont jusqu'à 32 caractères, on a toujours 256^32 valeurs
 Pour obtenir la place en octets il suffit de diviser par le nombre de valeurs différentes que 
 peut encoder un octet, ce qui donne 256^32 / 256 = 256^31 octets nécessaire pour stocker un élément de U.
 
-code jusqu'à question 21 ;)
+
+Question 27 :
+
+Il y a 16280 mots différents dans 'LeRougeEtLeNoir.txt'

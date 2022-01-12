@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
 
         Random ran = new Random();
-// 7021235399982934388
+        
         // pour un dico créé à partir du fichier radnomWordsPetit.txt avec m appartenant à {1,2,3,4}
         // Dictionnaire d = new Dictionnaire("randomWordsPetit.txt", 50);
  
@@ -15,6 +15,8 @@ public class Test {
         System.out.println("maxSize : " + d.getMaxSize());
         System.out.println("cardinal : " + d.getCardinal());
         System.out.println("nbListes : " + d.getNbListes());
+        System.out.println("totalTimeh : " + d.getTotalTimeh() + "ms");
+        System.out.println("totalTimeContient : " + d.getTotalTimeContient() + "ms");
 
         int nbRecherches = 100000;
 
@@ -37,9 +39,6 @@ public class Test {
         long fin = System.currentTimeMillis();
 
         System.out.println("temps total : " + (fin - deb) + " ms");
-
-        // System.out.println(Dictionnaire.calculeListeInt("randomWordsPetit.txt"));
-
     }
 
 }
