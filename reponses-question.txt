@@ -1,0 +1,26 @@
+Question 1 :
+
+En prenant en compte les 256 caractères possibles et en nommant U l'ensemble
+des chaines d'au plus 30 caractères, 
+|U| vaut 256^30 soit un nombre supérieur à 10^72.
+
+Même avec 32 caractères possibles,
+|U| vaut 32^30 soit un nombre superieur à 10^45;
+
+
+Question 2 :
+
+En supposant que  U = [0, x], une structure de données très efficace pour
+botenir la propriété p2 est d'utiliser un tableau de booléens où chaque case vaudra 'true'
+si la valeur correspondant à l'indice est présente et 'false' sinon
+
+
+Question 3 :
+
+Un octet permet de coder 256 valeurs différentes.
+En reprenant l'exemple où les caractères possibles dans une chaine sont au nombre de 256
+et où leur longueur  vont jusqu'à 32 caractères, on a toujours 256^32 valeurs différentes possibles.
+Pour obtenir la place en octets il suffit de diviser par le nombre de valeurs différentes que 
+peut encoder un octet, ce qui donne 256^32 / 256 = 256^31 octets nécessaire pour stocker un élément de U.
+
+code jusqu'à question 21 ;)
