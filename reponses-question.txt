@@ -24,6 +24,16 @@ Pour obtenir la place en octets il suffit de diviser par le nombre de valeurs di
 peut encoder un octet, ce qui donne 256^32 / 256 = 256^31 octets nécessaire pour stocker un élément de U.
 
 
+Question 18 :
+
+En calculant indépendamment chaque caractères on obtient un nombre de multiplication
+qui grandit de manière exponentielle avec la longueur du mot :
+il s'agit de la somme pour i allant de 1 à la longueur du mot, des i
+Donc pour un mot de taille k  cela donnera donc k * (k + 1) / 2 multiplication (c'est beaucoup)
+Preuve : pour chaque caractère, on a i - 1 multiplications pour calculer la puissance de 256,
+puis une multiplication par le code ASCII.
+
+
 Question 27 :
 
 Il y a 16280 mots différents dans 'LeRougeEtLeNoir.txt'
