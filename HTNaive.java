@@ -85,7 +85,7 @@ public class HTNaive {
 
     public String toString() {
 
-        String res = "";    
+        String res = "";
 
         for (int i = 0; i < this.table.length; i++)
             res += "Table[" + i + "] : "
