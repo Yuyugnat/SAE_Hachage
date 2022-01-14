@@ -38,14 +38,14 @@ puis une multiplication par le code ASCII.
 
 # Question 25 :
 
-Pour m == 1 :
+Pour m == 1 :\n
 
-maxSize : 21393
-cardinal : 21393
-nbListes : 1
-totalTimeh : 22 ms
-totalTimeContient : 7047 ms
-temps total : 11069 ms
+maxSize : 21393\n
+cardinal : 21393\n
+nbListes : 1\n
+totalTimeh : 22 ms\n
+totalTimeContient : 7047 ms\n
+temps total : 11069 ms\n
 
 Pour m == 2 : 
 
