@@ -25,9 +25,8 @@ public class Dictionnaire {
 
         BigInteger multiplieur = new BigInteger("1");
 
-        
-
         for (int i = s.length() - 1; i >= 0; i--) {
+            
             res = res.add(BigInteger.valueOf((int) s.charAt(i)).multiply(multiplieur));
             multiplieur = multiplieur.multiply(BigInteger.valueOf(256));
 
@@ -91,7 +90,7 @@ public class Dictionnaire {
 
         }
 
-        sc.useDelimiter(", |. | |\\n|,|;|:|\\.|!|\\?|-");
+        sc.useDelimiter(" |\\n|,|;|:|\\.|!|\\?|-");
 
         String mot;
         

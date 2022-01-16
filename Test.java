@@ -6,11 +6,13 @@ public class Test {
 
         Random ran = new Random();
         
-        // pour un dico créé à partir du fichier radnomWordsPetit.txt avec m appartenant à {1,2,3,4}
-        // Dictionnaire d = new Dictionnaire("randomWordsPetit.txt", 50);
+        // pour un dico créé à partir du fichier radnomWordsPetit.txt avec m appartenant à {1,2,4,8}
+        // Dictionnaire d = new Dictionnaire("randomWordsPetit.txt", 8);
  
         // pour un dico créé à partir du fichier radnomWords.txt avec f appartenant à {0.01,0.1,0.5,1}
-        Dictionnaire d = new Dictionnaire("LeRougeEtLeNoir.txt", 1.0);
+        Dictionnaire d = new Dictionnaire("randomWords.txt", 1.0);
+
+        // System.out.println(d);
 
         System.out.println("maxSize : " + d.getMaxSize());
         System.out.println("cardinal : " + d.getCardinal());
